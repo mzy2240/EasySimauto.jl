@@ -38,7 +38,7 @@ Check out the [documentation](https://github.com/JuliaPy/PyCall.jl#specifying-th
 ```julia
 using EasySimauto
 ```
-Two classes `esa` and `SAW` are exposed when loading the module. Then all the methods in `esa.py` shall be available in Julia. For example, to load a case file and run power flow analysis, use
+Two classes `esa` and `SAW` are exposed once loading the module. Then all the methods in `esa.py` shall be available in Julia. For example, to load a case file and run power flow analysis, use
 
 ```julia
 using EasySimauto
