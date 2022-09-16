@@ -1,0 +1,13 @@
+name = "esa"
+uuid = "0328f02f-01d5-4f4a-bc55-6d37b275e203"
+authors = ["Zeyu Mao"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
