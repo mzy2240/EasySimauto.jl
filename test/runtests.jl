@@ -1,7 +1,7 @@
-using ESA
+using EasySimauto
 using Test
 
-@testset "ESA.jl" begin
+@testset "EasySimauto.jl" begin
     path = joinpath(@__DIR__, "IEEE 14 bus.pwb")
     saw = SAW(path)
     @test saw.pw_order == false

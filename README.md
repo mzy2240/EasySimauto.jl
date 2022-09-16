@@ -5,16 +5,16 @@ The Julia interface for [Easy SimAuto (ESA)](https://github.com/mzy2240/ESA) and
 
 ## Introduction
 
-`ESA.jl` is the Julia API for ESA, an easy-to-use power system analysis automation environment atop PowerWorld Simulator
+`EasySimauto.jl` is the Julia API for ESA, an easy-to-use power system analysis automation environment atop PowerWorld Simulator
 
 
 ## Installation
 
-Install `ESA.jl` with
+Install `EasySimauto.jl` with
 
 ```julia
 using Pkg
-Pkg.add("ESA")
+Pkg.add("EasySimauto")
 ```
 
 ### (Optional) Customize Python Environment 
@@ -33,15 +33,15 @@ Check out the [documentation](https://github.com/JuliaPy/PyCall.jl#specifying-th
 
 ## Usage
 
-`ESA.jl` exposes all Python APIs under `esa.py`. Use the package with
+`EasySimauto.jl` exposes all Python APIs under `esa.py`. Use the package with
 
 ```julia
-using ESA
+using EasySimauto
 ```
 Two classes `esa` and `SAW` are exposed when loading the module. Then all the methods in `esa.py` shall be available in Julia. For example, to load a case file and run power flow analysis, use
 
 ```julia
-using ESA
+using EasySimauto
 
 case_path = raw"C:\Users\myuser\git\ESA\tests\cases\ieee_14\IEEE 14 bus_pws_version_21.pwb"
 saw = SAW(case_path)
@@ -59,7 +59,7 @@ We welcome contributions! Please read `contributing.md`.
 
 ## License
 
-`ESA.jl` is released under [Apache License 2.0](https://github.com/mzy2240/ESA.jl/blob/main/LICENSE). 
+`EasySimauto.jl` is released under [Apache License 2.0](https://github.com/mzy2240/ESA.jl/blob/main/LICENSE). 
 
 ## Acknowledgement
 

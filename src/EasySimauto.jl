@@ -1,5 +1,5 @@
 # Copyright (c) 2022 Zeyu Mao
-module ESA
+module EasySimauto
 
 using PyCall
 using Conda
