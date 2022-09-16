@@ -1,5 +1,5 @@
 
-# <img src="https://raw.githubusercontent.com/JuliaLang/julia/master/doc/src/assets/julia.ico" height="26"/> ESA.jl
+# <img src="https://raw.githubusercontent.com/JuliaLang/julia/master/doc/src/assets/julia.ico" height="26"/> EasySimauto.jl
 
 The Julia interface for [Easy SimAuto (ESA)](https://github.com/mzy2240/ESA) and PowerWorld COM object (SimAuto Server).
 
