@@ -1,7 +1,11 @@
-name = "esa"
+name = "ESA"
 uuid = "0328f02f-01d5-4f4a-bc55-6d37b275e203"
 authors = ["Zeyu Mao"]
 version = "0.1.0"
+
+[deps]
+Conda = "8f4d0f93-b110-5947-807f-2305c1781a2d"
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
 
 [compat]
 julia = "1"

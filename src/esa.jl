@@ -1,15 +1,22 @@
+# Copyright (c) 2022 Zeyu Mao
 module ESA
 
-using PyCall: PyNULL, pyimport
+using PyCall
+using Conda
 
-export esa
+export esa, SAW
+
+# install conda package
+Conda.pip_interop(true)
+Conda.pip("install", "esa")
+
+# https://pypi.org/project/esa/
 const esa = PyNULL()
+const SAW = PyNULL()
 
-function __init__()
-    const PIP_PACKAGES = ["esa"]
-    sys = pyimport("sys")
-    subprocess = pyimport("subprocess")
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", PIP_PACKAGES...])
+function __init__() 
+    copy!(esa, pyimport("esa"))
+    copy!(SAW, pyimport("esa").SAW)
 end
 
 end
