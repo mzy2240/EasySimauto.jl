@@ -1,14 +1,14 @@
 # Copyright (c) 2022 Zeyu Mao
 module EasySimauto
 
-using PyCall
+using PythonCall
 using Conda
 
 export esa, SAW
 
 # https://pypi.org/project/esa/
-const esa = PyNULL()
-const SAW = PyNULL()
+const esa = Ref{Py}()
+const SAW = Ref{Py}()
 
 
 function __init__()
@@ -16,8 +16,8 @@ function __init__()
         # install conda package
         Conda.pip_interop(true)
         Conda.pip("install", "esa")
-        copy!(esa, pyimport("esa"))
-        copy!(SAW, pyimport("esa").SAW)
+        esa[] = pyimport("esa")
+        SAW[] = pyimport("esa").SAW
     end
 end
 
