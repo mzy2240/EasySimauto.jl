@@ -15,6 +15,7 @@ const SAW = PythonCall.pynew()
 function __init__()
     if get(ENV, "JULIA_REGISTRYCI_AUTOMERGE", "false") != "true"
         # install conda package
+        CondaPkg.add("numba")
         CondaPkg.add_pip("esa")
     end
     PythonCall.pycopy!(esa, pyimport("esa"))
