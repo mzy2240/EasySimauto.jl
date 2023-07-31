@@ -3,22 +3,22 @@ module EasySimauto
 
 using PythonCall
 using Conda
+using CondaPkg
 
 export esa, SAW
 
 # https://pypi.org/project/esa/
-const esa = Ref{Py}()
-const SAW = Ref{Py}()
+const esa = PythonCall.pynew()
+const SAW = PythonCall.pynew()
 
 
 function __init__()
     if get(ENV, "JULIA_REGISTRYCI_AUTOMERGE", "false") != "true"
         # install conda package
-        Conda.pip_interop(true)
-        Conda.pip("install", "esa")
-        esa[] = pyimport("esa")
-        SAW[] = pyimport("esa").SAW
+        add_pip("esa")
     end
+    PythonCall.pycopy!(esa, pyimport("esa"))
+    PythonCall.pycopy!(SAW, pyimport("esa").SAW)
 end
 
 end
